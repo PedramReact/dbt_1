@@ -11,8 +11,6 @@ models:
              # - not_null
           - name: jour
             description: "Jour de l'accident"
-           # tests:
-            #  - test_jour_valide
           - name: mois
             description: "Mois de l'accident"
             tests:
