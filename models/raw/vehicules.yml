@@ -1,0 +1,35 @@
+version: 2
+
+sources:
+  - name: raw
+    database: myprojetlooker
+    schema: Accidents
+    tables:
+      - name: véhicules
+        description: "Bases de données annuelles des accidents"
+        columns:
+          - name: Num_Acc
+            description: "Identifiant de l’accident identique à celui du fichier rubrique CARACTERISTIQUES repris pour chacun des véhicules décrits impliqués dans l’accident"
+           # tests:
+            #  - unique
+             # - not_null
+          - name: id_vehicule
+            description: "Identifiant unique du véhicule repris pour chacun des usagers occupant ce véhicule (y compris les piétons qui sont rattachés aux véhicules qui les ont heurtés) – Code numérique."
+          - name: Num_Veh
+            description: "Identifiant du véhicule repris pour chacun des usagers occupant ce véhicule – Code alphanumérique."
+          - name: senc
+            description: "Sens de circulation"
+          - name: catv
+            description: "Catégorie du véhicule"
+          - name: obs
+            description: "Obstacle fixe heurté"
+          - name: obsm
+            description: "Obstacle mobile heurté"
+          - name: choc
+            description: "Point de choc initial"
+          - name: manv
+            description: "Manœuvre principale avant l’accident"
+          - name: motor
+            description: "Type de motorisation du véhicule"
+          - name: occutc
+            description: "Nombre d’occupants dans le transport en commun"

@@ -1,0 +1,43 @@
+version: 2
+
+sources:
+  - name: raw
+    database: myprojetlooker
+    schema: Accidents
+    tables:
+      - name: caracteristique
+        description: "Bases de données annuelles des accidents"
+        columns:
+          - name: Num_Acc
+            description: "Numéro d'identifiant de l'accident"
+           # tests:
+            #  - unique
+             # - not_null
+          - name: jour
+            description: "Jour de l'accident"
+          - name: mois
+            description: "Mois de l'accident"
+          - name: an
+            description: "Année de l'accident"
+          - name: hrmn
+            description: "Heure et minutes de l'accident"
+          - name: lum
+            description: "Condition d'éclairage lors de l'accident"
+          - name: dep
+            description: "Code INSEE du département"
+          - name: com
+            description: "Code INSEE de la commune"
+          - name: agg
+            description: "Localisation : hors ou en agglomération"
+          - name: int
+            description: "Type d'intersection"
+          - name: atm
+            description: "Conditions atmosphériques"
+          - name: col
+            description: "Type de collision"
+          - name: adr
+            description: "Adresse postale (si disponible)"
+          - name: lat
+            description: "Latitude"
+          - name: long
+            description: "Longitude"

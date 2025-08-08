@@ -1,0 +1,47 @@
+version: 2
+
+models:
+  - name: caracteristique
+    description: "caracteristique" 
+    columns:
+          - name: numero_accident
+            description: "Numéro d'identifiant de l'accident"
+           # tests:
+            #  - unique
+             # - not_null
+          - name: jour
+            description: "Jour de l'accident"
+           # tests:
+            #  - test_jour_valide
+          - name: mois
+            description: "Mois de l'accident"
+            tests:
+            - between_range: 
+               min_value: 1
+               max_value: 12
+          - name: an
+            description: "Année de l'accident"
+          - name: heure_minut
+            description: "Heure et minutes de l'accident"
+          - name: lum
+            description: "Condition d'éclairage lors de l'accident"
+            #tests:
+            #- accepted_values:
+             # values: ["1", "2", "3", "4", "5"]
+              #quote: true
+          - name: departement
+            description: "Code INSEE du département"
+          - name: commune
+            description: "Code INSEE de la commune"
+          - name: aggregation
+            description: "Localisation : hors ou en agglomération"
+          - name: atm
+            description: "Conditions atmosphériques"
+          - name: col
+            description: "Type de collision"
+          - name: addresse
+            description: "Adresse postale (si disponible)"
+          - name: latitude
+            description: "Latitude"
+          - name: logitude
+            description: "Longitude"
