@@ -1,0 +1,42 @@
+version: 2
+
+sources:
+  - name: raw
+    database: myprojetlooker
+    schema: Accidents
+    tables:
+      - name: usagers
+        description: "Bases de données annuelles des accidents"
+        columns:
+          - name: Num_Acc
+            description: "Identifiant de l’accident identique à celui du fichier rubrique CARACTERISTIQUES repris pour chacun des usagers décrits impliqués dans l’accident."
+            # tests:
+            #  - not_null
+          - name: id_vehicule
+            description: "Identifiant unique du véhicule..."
+          - name: Num_Veh
+            description: "Identifiant du véhicule..."
+          - name: place
+            description: "Place occupée..."
+          - name: catu
+            description: "Catégorie d'usager"
+          - name: grav
+            description: "Gravité de blessure"
+          - name: sexe
+            description: "Sexe"
+          - name: an_nais
+            description: "Année de naissance"
+          - name: trajet
+            description: "Motif du déplacement"
+          - name: secu1
+            description: "Équipement de sécurité 1"
+          - name: secu2
+            description: "Équipement de sécurité 2"
+          - name: secu3
+            description: "Équipement de sécurité 3"
+          - name: locp
+            description: "Localisation piéton"
+          - name: actp
+            description: "Action piéton"
+          - name: etatp
+            description: "Seul ou non"
